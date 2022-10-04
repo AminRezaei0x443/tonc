@@ -11,6 +11,7 @@ jobs:
       - uses: mymindstorm/setup-emsdk@v11
         with:
           version: 3.1.20
+          no-cache: true
           actions-cache-folder: "/emsdk-cache"
       - name: Setup Ninja
         uses: seanmiddleditch/gha-setup-ninja@master
