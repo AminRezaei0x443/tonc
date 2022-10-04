@@ -52,7 +52,7 @@ build-ton: build-openssl ${TON_DIR}
 only-build-ton-em:
 	rm -rf ${TON_DIR}/build
 	mkdir ${TON_BUILD_DIR} || true
-	cd ${TON_DIR} && git checkout .
+	cd ${TON_DIR} && git checkout 35d17249e6b54d67a5781ebf26e4ee98e56c1e50
 	cd ${TON_DIR} && git apply ${PWD}/ton_wasm.patch
 	cd ${TON_BUILD_DIR} && emcmake cmake -DOPENSSL_FOUND=1 -DOPENSSL_INCLUDE_DIR=${PWD}/${OPENSSL_DIR}/include \
 		-DOPENSSL_CRYPTO_LIBRARY=${PWD}/${OPENSSL_DIR}/libcrypto.a \
